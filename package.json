@@ -1,0 +1,21 @@
+{
+  "name": "scope-guard-root",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "Frontend",
+    "Backend"
+  ],
+  "scripts": {
+    "dev": "npm --prefix Frontend run dev",
+    "build": "npm --prefix Frontend run build",
+    "build:dev": "npm --prefix Frontend run build:dev",
+    "preview": "npm --prefix Frontend run preview",
+    "lint": "npm --prefix Frontend run lint",
+    "format": "npm --prefix Frontend run format",
+    "db:generate": "npm --prefix Backend run db:generate",
+    "db:migrate": "npm --prefix Backend run db:migrate",
+    "db:push": "npm --prefix Backend run db:push",
+    "db:studio": "npm --prefix Backend run db:studio"
+  }
+}
