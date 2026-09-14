@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useSession } from "@/lib/auth";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
@@ -39,6 +40,7 @@ export function MarketingHeader() {
               </Button>
             </>
           )}
+          <ThemeToggle />
         </nav>
       </div>
     </header>

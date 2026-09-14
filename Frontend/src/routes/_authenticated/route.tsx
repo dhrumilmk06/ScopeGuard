@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Logo } from "@/components/MarketingHeader";
 import { initials, useSession } from "@/lib/auth";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export const Route = createFileRoute("/_authenticated")({
   ssr: false,
@@ -84,10 +85,13 @@ function AppShell() {
             <p className="truncate text-xs text-muted-foreground">{user?.email}</p>
           </div>
         </div>
-        <Button variant="ghost" size="sm" className="w-full justify-start" onClick={handleSignOut}>
-          <LogOut className="size-4" />
-          Sign out
-        </Button>
+        <div className="mt-2 flex items-center gap-2">
+          <Button variant="ghost" size="sm" className="flex-1 justify-start" onClick={handleSignOut}>
+            <LogOut className="size-4" />
+            Sign out
+          </Button>
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );
