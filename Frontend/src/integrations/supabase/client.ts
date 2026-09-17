@@ -6,8 +6,8 @@ export const supabase = {
     signOut: async () => ({ error: null }),
     updateUser: async () => ({ error: null }),
     onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
-    signInWithPassword: async () => ({ data: { session: null, user: null }, error: null }),
-    signUp: async () => ({ data: { session: null, user: null }, error: null }),
+    signInWithPassword: async () => ({ data: { session: { access_token: "mock-token" }, user: { id: "test-user" } }, error: null }),
+    signUp: async () => ({ data: { session: { access_token: "mock-token" }, user: { id: "test-user" } }, error: null }),
   },
   from: (table: string) => ({
     select: () => ({
